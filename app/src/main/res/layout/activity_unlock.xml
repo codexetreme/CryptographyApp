@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_green"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="gears.com.lab_project.UnlockActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+
+        android:text="Unlocker"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/frame_layout"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/barcode"
+            android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:gvb_auto_focus="true"
+            app:gvb_code_format="all_format"
+            app:gvb_flash="false"
+            app:gvb_rect_colors="@array/rect_color" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:id="@+id/frame_layout_image"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/qr_img"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="SCAN"
+            android:id="@+id/scan_btn"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            android:id="@+id/select_img_btn"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Scan Image"
+            android:id="@+id/scan_img_btn"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_unlock"
+        android:layout_gravity="center"
+        android:text="Unlock"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:id="@+id/unlock_tv"
+        android:layout_marginTop="30dp"
+        />
+
+</LinearLayout>

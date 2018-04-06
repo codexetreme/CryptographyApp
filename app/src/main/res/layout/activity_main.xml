@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/color_green"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="gears.com.lab_project.MainActivity">
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cryptographic Safe"
+        android:textSize="40sp"
+        android:textColor="@color/cardview_dark_background"
+        />
+        <Button
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+
+            android:layout_height="wrap_content"
+            android:text="Editor"
+            android:id="@+id/btn_editor"
+            />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Generate QR"
+        android:layout_gravity="center"
+        android:id="@+id/btn_genQR"
+        />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Unlock File"
+        android:layout_gravity="center"
+        android:id="@+id/btn_unlock"
+        />
+
+</LinearLayout>
